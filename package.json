@@ -9,7 +9,7 @@
         "install-global": "bun link"
     },
     "bin": {
-        "openrbx": "./index.ts"
+        "openrbx": "src/index.ts"
     },
     "keywords": [
         "roblox",
