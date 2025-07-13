@@ -1,0 +1,27 @@
+{
+    "name": "openrbx",
+    "version": "1.0.0",
+    "description": "CLI tool to launch Roblox Studio with place and universe IDs",
+    "main": "src/index.ts",
+    "type": "module",
+    "scripts": {
+        "build": "bun build src/index.ts --outdir dist --target bun",
+        "dev": "bun run src/index.ts",
+        "install-global": "bun link"
+    },
+    "bin": {
+        "openrbx": "./index.ts"
+    },
+    "keywords": [
+        "roblox",
+        "studio",
+        "cli",
+        "launcher",
+        "development"
+    ],
+    "author": "kanosy",
+    "license": "MIT",
+    "engines": {
+        "bun": ">=1.0.0"
+    }
+}
