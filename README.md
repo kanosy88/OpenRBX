@@ -6,7 +6,7 @@ A simple CLI tool to launch Roblox Studio with specific Place ID and Universe ID
 
 ```bash
 # Clone and install dependencies
-git clone https://github.com/kanosy88/openrbx.git
+git clone https://github.com/kanosy88/OpenRBX.git
 cd openrbx
 bun install
 

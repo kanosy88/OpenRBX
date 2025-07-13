@@ -5,7 +5,6 @@
     "main": "src/index.ts",
     "type": "module",
     "scripts": {
-        "build": "bun build src/index.ts --outdir dist --target bun",
         "dev": "bun run src/index.ts",
         "install-global": "bun link"
     },
@@ -23,5 +22,10 @@
     "license": "MIT",
     "engines": {
         "bun": ">=1.0.0"
+    },
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/kanosy88/OpenRBX",
+        "directory": "main"
     }
 }
