@@ -10,6 +10,8 @@ export interface RobloxProtocolParams {
     universeId: string;
 }
 
+// execAsync is a promisified version of the exec function from child_process,
+// allowing to use async/await syntax for running shell commands.
 const execAsync = promisify(exec);
 
 class RobloxStudioLauncher {
