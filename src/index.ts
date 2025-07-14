@@ -2,6 +2,8 @@ import { spawn, exec } from "child_process";
 import { platform } from "os";
 import { parseArgs } from "util";
 import { promisify } from "util";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export interface RobloxProtocolParams {
     launchmode: string;
@@ -182,7 +184,13 @@ Examples:
 }
 
 function showVersion() {
-    console.log("openrbx v1.0.0");
+    try {
+        const packagePath = join(__dirname, "../package.json");
+        const packageData = JSON.parse(readFileSync(packagePath, "utf8"));
+        console.log(`openrbx v${packageData.version}`);
+    } catch (error) {
+        console.log("openrbx v1.1.3"); // fallback
+    }
 }
 
 async function main() {
