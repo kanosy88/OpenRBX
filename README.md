@@ -61,7 +61,6 @@ openrbx -p 1234567891234567 -u 1234567890 --no-logs
 -   ✅ **Error handling** : Clear error messages
 -   ✅ **Process checking** : Prevents conflicts with existing Roblox Studio instances
 -   ✅ **Minimal logging** : Optional reduced output with `--no-logs`
--   ✅ **Debug mode** : Environment variable `DEBUG=1`
 
 ## Process Management
 

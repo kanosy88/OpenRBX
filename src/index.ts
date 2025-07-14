@@ -264,7 +264,7 @@ async function main() {
             }
         }
 
-        if (process.env.DEBUG) {
+        if (!noLogs) {
             console.log("🔗 Protocol URL:", launcher.getProtocolUrl());
         }
 
