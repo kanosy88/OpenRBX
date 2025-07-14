@@ -1,6 +1,6 @@
 {
     "name": "openrbx",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "description": "CLI tool to launch Roblox Studio with place and universe IDs",
     "main": "src/index.ts",
     "type": "module",
