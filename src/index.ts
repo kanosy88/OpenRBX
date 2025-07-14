@@ -2,7 +2,13 @@ import { spawn, exec } from "child_process";
 import { platform } from "os";
 import { parseArgs } from "util";
 import { promisify } from "util";
-import type { RobloxProtocolParams } from "./types";
+
+export interface RobloxProtocolParams {
+    launchmode: string;
+    task: string;
+    placeId: string;
+    universeId: string;
+}
 
 const execAsync = promisify(exec);
 
