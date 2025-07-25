@@ -16,7 +16,7 @@ export interface RobloxProtocolParams {
 // allowing to use async/await syntax for running shell commands.
 const execAsync = promisify(exec);
 
-class RobloxStudioLauncher {
+export class RobloxStudioLauncher {
   private protocolUrl: string;
 
   constructor(params: RobloxProtocolParams) {
@@ -296,5 +296,3 @@ async function main() {
 }
 
 main();
-
-export { RobloxStudioLauncher };
