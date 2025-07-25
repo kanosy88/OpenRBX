@@ -182,7 +182,7 @@ function showVersion() {
     const packageData = JSON.parse(readFileSync(packagePath, "utf8"));
     console.log(`openrbx v${packageData.version}`);
   } catch (error) {
-    console.log("openrbx v1.1.3"); // fallback
+    console.log("openrbx v1.1.3");
   }
 }
 
@@ -205,12 +205,12 @@ async function main() {
 
     if (values.help) {
       showHelp();
-      return;
+      process.exit(0);
     }
 
     if (values.version) {
       showVersion();
-      return;
+      process.exit(0);
     }
 
     if (!values["place-id"] || !values["universe-id"]) {
@@ -278,14 +278,23 @@ async function main() {
     } else {
       console.log("✅ Roblox Studio launched successfully!");
     }
+
+    process.exit(0);
   } catch (error) {
-    console.error("❌ Error:", error);
-    process.exit(1);
+    if (error instanceof Error) {
+      if ("code" in error && error.code === "ERR_PARSE_ARGS_UNKNOWN_OPTION") {
+        console.error(
+          "❌ Unknown option provided. Use --help to see available options."
+        );
+      } else {
+        console.error("❌ Error:", error);
+      }
+    }
+
+    process.exit();
   }
 }
 
 main();
-
-process.exit(0);
 
 export { RobloxStudioLauncher };
